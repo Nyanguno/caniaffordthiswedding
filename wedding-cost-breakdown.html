@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-25TWGT6LCN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25TWGT6LCN');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Detailed wedding cost breakdown by category. Understand exactly where your wedding budget goes and how to allocate funds for maximum impact.">
+    <meta name="keywords" content="wedding cost breakdown, wedding budget allocation, wedding expense categories, wedding cost by category, wedding budget percentages">
+    <title>Wedding Cost Breakdown by Category - Complete Guide | Can I Afford This Wedding</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Wedding Cost Breakdown by Category - Complete Guide">
+    <meta property="og:description" content="Detailed breakdown of wedding costs by category. Learn how to allocate your budget for maximum impact.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://nyanguno.github.io/caniaffordthiswedding/wedding-cost-breakdown.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.7;
+            color: #333;
+            background: #f8fafc;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .article {
+            background: white;
+            margin: -40px auto 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .article::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .article-content {
+            padding: 40px;
+        }
+        
+        .article-meta {
+            color: #6b7280;
+            font-size: 0.9rem;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .article h2 {
+            color: #1f2937;
+            font-size: 1.8rem;
+            margin: 40px 0 20px 0;
+            padding-top: 20px;
+        }
+        
+        .article h3 {
+            color: #374151;
+            font-size: 1.4rem;
+            margin: 30px 0 15px 0;
+        }
+        
+        .article h4 {
+            color: #4b5563;
+            font-size: 1.2rem;
+            margin: 25px 0 12px 0;
+        }
+        
+        .article p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .cost-category {
+            background: #f8fafc;
+            border-radius: 12px;
+            padding: 25px;
+            margin: 30px 0;
+            border-left: 4px solid #f093fb;
+        }
+        
+        .cost-category h3 {
+            color: #1f2937;
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .percentage-badge {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .cost-breakdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .cost-breakdown-table th {
+            background: #f1f5f9;
+            color: #374151;
+            padding: 12px 15px;
+            text-align: left;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .cost-breakdown-table td {
+            padding: 10px 15px;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 0.95rem;
+        }
+        
+        .cost-breakdown-table tr:hover {
+            background: #f8fafc;
+        }
+        
+        .highlight-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .tip-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 4px solid #22c55e;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .warning-box {
+            background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+            border-left: 4px solid #f59e0b;
+            padding: 25px;
+            margin: 30px 0;
+            border-radius: 8px;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 16px;
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .cta-section h3 {
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+        
+        .cta-section p {
+            margin-bottom: 24px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #f5576c;
+            padding: 15px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .nav-links {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .nav-links a {
+            color: #f5576c;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: 2px solid #f5576c;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .nav-links a:hover {
+            background: #f5576c;
+            color: white;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .article-content {
+                padding: 24px;
+            }
+            
+            .container {
+                padding: 0 16px;
+            }
+            
+            .nav-links a {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .cost-breakdown-table {
+                font-size: 0.9rem;
+            }
+            
+            .cost-breakdown-table th,
+            .cost-breakdown-table td {
+                padding: 8px 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <h1>📊 Wedding Cost Breakdown by Category</h1>
+            <p>Understand exactly where your wedding budget goes and how to allocate funds for maximum impact on your special day.</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="article">
+            <div class="article-content">
+                <div class="article-meta">
+                    Published January 5, 2025 | By Manus AI | 12 min read
+                </div>
+                
+                <p>Understanding how wedding costs break down by category is essential for effective budget planning and allocation. This comprehensive guide examines each major wedding expense category, providing detailed insights into typical costs, factors that influence pricing, and strategies for optimizing your spending in each area.</p>
+                
+                <div class="highlight-box">
+                    <strong>💡 Quick Reference:</strong> Use our <a href="index.html" style="color: #0ea5e9; font-weight: 600;">wedding affordability calculator</a> to see how these percentages apply to your specific budget and get a personalized cost breakdown.
+                </div>
+                
+                <h2>Overview of Wedding Budget Allocation</h2>
+                
+                <p>Wedding budgets typically follow predictable patterns in terms of percentage allocation across different categories. While every couple's priorities differ, understanding these standard distributions helps you make informed decisions about where to allocate your funds for maximum impact.</p>
+                
+                <p>The following breakdown represents typical spending patterns based on industry data and real wedding budgets. Remember that these are guidelines, not rules – your personal priorities should ultimately guide your specific allocations.</p>
+                
+                <div class="cost-category">
+                    <h3>🏛️ Venue & Catering <span class="percentage-badge">40-50%</span></h3>
+                    <p>The largest portion of your wedding budget typically goes to venue and catering expenses. This category encompasses your reception venue, ceremony site (if different), food service, beverages, and related service charges.</p>
+                    
+                    <table class="cost-breakdown-table">
+                        <thead>
+                            <tr>
+                                <th>Component</th>
+                                <th>Typical Range</th>
+                                <th>Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Venue Rental</td>
+                                <td>$2,000 - $15,000+</td>
+                                <td>Varies dramatically by location and venue type</td>
+                            </tr>
+                            <tr>
+                                <td>Catering (per person)</td>
+                                <td>$50 - $200+</td>
+                                <td>Depends on service style and menu complexity</td>
+                            </tr>
+                            <tr>
+                                <td>Bar Service</td>
+                                <td>$15 - $50 per person</td>
+                                <td>Open bar vs. limited options vs. cash bar</td>
+                            </tr>
+                            <tr>
+                                <td>Service Charges</td>
+                                <td>18-25% of F&B</td>
+                                <td>Gratuity and administrative fees</td>
+                            </tr>
+                            <tr>
+                                <td>Rentals</td>
+                                <td>$500 - $3,000+</td>
+                                <td>Tables, chairs, linens if not included</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Cost Factors:</strong> Guest count is the primary driver of catering costs, while venue selection significantly impacts the base rental fee. Location, day of the week, and season all influence pricing in this category.</p>
+                    
+                    <p><strong>Savings Opportunities:</strong> Consider off-peak dates, alternative venues, buffet-style service, or limiting bar options. Brunch or lunch receptions typically cost less than dinner service.</p>
+                </div>
+                
+                <div class="cost-category">
+                    <h3>📸 Photography & Videography <span class="percentage-badge">10-15%</span></h3>
+                    <p>Professional photography and videography capture your wedding memories for a lifetime. This investment varies widely based on the photographer's experience, style, and the comprehensiveness of coverage you desire.</p>
+                    
+                    <table class="cost-breakdown-table">
+                        <thead>
+                            <tr>
+                                <th>Service</th>
+                                <th>Typical Range</th>
+                                <th>What's Included</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Wedding Photography</td>
+                                <td>$1,500 - $8,000+</td>
+                                <td>Day-of coverage, edited images, online gallery</td>
+                            </tr>
+                            <tr>
+                                <td>Engagement Session</td>
+                                <td>$300 - $800</td>
+                                <td>Often included in wedding packages</td>
+                            </tr>
+                            <tr>
+                                <td>Wedding Album</td>
+                                <td>$400 - $1,500</td>
+                                <td>Professional design and printing</td>
+                            </tr>
+                            <tr>
+                                <td>Videography</td>
+                                <td>$1,200 - $5,000+</td>
+                                <td>Highlight reel, ceremony footage</td>
+                            </tr>
+                            <tr>
+                                <td>Additional Hours</td>
+                                <td>$150 - $400/hour</td>
+                                <td>Extended coverage beyond base package</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Cost Factors:</strong> Photographer experience and reputation, length of coverage, number of photographers, and additional services like albums or prints all impact pricing.</p>
+                    
+                    <p><strong>Investment Perspective:</strong> Photography is one area where quality matters significantly for long-term satisfaction. These images will be treasured for decades, making this a worthwhile investment area.</p>
+                </div>
+                
+                <div class="cost-category">
+                    <h3>👗 Attire & Beauty <span class="percentage-badge">8-10%</span></h3>
+                    <p>Wedding attire and beauty services ensure you look and feel your best on your special day. This category includes clothing, accessories, and professional beauty services for the couple and potentially the wedding party.</p>
+                    
+                    <table class="cost-breakdown-table">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Typical Range</th>
+                                <th>Considerations</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Wedding Dress</td>
+                                <td>$800 - $3,000+</td>
+                                <td>Plus alterations ($150-$600)</td>
+                            </tr>
+                            <tr>
+                                <td>Groom's Attire</td>
+                                <td>$200 - $1,000+</td>
+                                <td>Purchase vs. rental options</td>
+                            </tr>
+                            <tr>
+                                <td>Shoes & Accessories</td>
+                                <td>$100 - $500</td>
+                                <td>Shoes, jewelry, undergarments, etc.</td>
+                            </tr>
+                            <tr>
+                                <td>Hair & Makeup</td>
+                                <td>$300 - $1,200</td>
+                                <td>Trial sessions often additional</td>
+                            </tr>
+                            <tr>
+                                <td>Wedding Rings</td>
+                                <td>$500 - $3,000+</td>
+                                <td>Separate from engagement ring</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Savings Opportunities:</strong> Consider sample sales, trunk shows, or pre-owned dresses. Rental options exist for both wedding dresses and men's formal wear. DIY beauty or choosing less expensive salons can reduce costs.</p>
+                </div>
+                
+                <div class="cost-category">
+                    <h3>🌸 Flowers & Decorations <span class="percentage-badge">8-10%</span></h3>
+                    <p>Floral arrangements and decorative elements create the visual atmosphere for your wedding. Costs vary significantly based on flower types, arrangement complexity, and seasonal availability.</p>
+                    
+                    <table class="cost-breakdown-table">
+                        <thead>
+                            <tr>
+                                <th>Floral Element</th>
+                                <th>Typical Range</th>
+                                <th>Factors Affecting Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Bridal Bouquet</td>
+                                <td>$150 - $500</td>
+                                <td>Flower types, size, complexity</td>
+                            </tr>
+                            <tr>
+                                <td>Boutonnieres</td>
+                                <td>$15 - $35 each</td>
+                                <td>Usually match bouquet flowers</td>
+                            </tr>
+                            <tr>
+                                <td>Centerpieces</td>
+                                <td>$50 - $300 each</td>
+                                <td>Size, flower types, container style</td>
+                            </tr>
+                            <tr>
+                                <td>Ceremony Decorations</td>
+                                <td>$200 - $1,500</td>
+                                <td>Altar arrangements, aisle petals, etc.</td>
+                            </tr>
+                            <tr>
+                                <td>Additional Decor</td>
+                                <td>$300 - $2,000</td>
+                                <td>Candles, lighting, linens, signage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Seasonal Considerations:</strong> In-season flowers cost significantly less than out-of-season varieties. Local flowers are typically more affordable than imported options.</p>
+                    
+                    <p><strong>Cost-Saving Strategies:</strong> Use fewer but larger arrangements, choose in-season flowers, incorporate non-floral elements like candles or greenery, or repurpose ceremony arrangements for the reception.</p>
+                </div>
+                
+                <div class="cost-category">
+                    <h3>🎵 Music & Entertainment <span class="percentage-badge">8-10%</span></h3>
+                    <p>Music and entertainment set the mood for your celebration. Options range from simple playlist setups to full bands with elaborate sound systems.</p>
+                    
+                    <table class="cost-breakdown-table">
+                        <thead>
+                            <tr>
+                                <th>Entertainment Option</th>
+                                <th>Typical Range</th>
+                                <th>What's Included</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>DJ Service</td>
+                                <td>$800 - $2,500</td>
+                                <td>Music, MC services, basic lighting</td>
+                            </tr>
+                            <tr>
+                                <td>Live Band</td>
+                                <td>$2,000 - $8,000+</td>
+                                <td>Varies by band size and popularity</td>
+                            </tr>
+                            <tr>
+                                <td>Ceremony Musicians</td>
+                                <td>$300 - $1,000</td>
+                                <td>String quartet, harpist, etc.</td>
+                            </tr>
+                            <tr>
+                                <td>Sound Equipment</td>
+                                <td>$200 - $800</td>
+                                <td>If not included with DJ/band</td>
+                            </tr>
+                            <tr>
+                                <td>Special Entertainment</td>
+                                <td>$500 - $3,000</td>
+                                <td>Photo booth, dancers, etc.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>Decision Factors:</strong> Consider your musical preferences, the formality of your event, and your guests' likely preferences when choosing between DJ and live music options.</p>
+                </div>
+                
+                <div class="tip-box">
+                    <strong>💰 Budget Allocation Tip:</strong> These percentages are guidelines, not rules. If photography is your top priority, you might allocate 15-20% to that category while reducing spending elsewhere. The key is making conscious choices that align with your values and priorities.
+                </div>
+                
+                <h2>Smaller Budget Categories</h2>
+                
+                <p>While the categories above represent the major portions of most wedding budgets, several smaller categories are equally important for a complete celebration.</p>
+                
+                <div class="cost-category">
+                    <h3>🚗 Transportation <span class="percentage-badge">2-5%</span></h3>
+                    <p>Transportation ensures you and your guests arrive safely and on time. Costs depend on the distance between venues and the level of service desired.</p>
+                    
+                    <p><strong>Typical Options:</strong> Luxury car rental ($200-$800), limousine service ($400-$1,200), party bus for guests ($300-$1,000), or ride-sharing coordination for guest transportation.</p>
+                </div>
+                
+                <div class="cost-category">
+                    <h3>📮 Stationery <span class="percentage-badge">2-3%</span></h3>
+                    <p>Wedding stationery includes all printed materials for your wedding, from save-the-dates through thank-you cards.</p>
+                    
+                    <p><strong>Components:</strong> Save-the-dates ($1-$3 each), invitations ($2-$8 each), programs ($0.50-$2 each), menus, place cards, and thank-you notes. Digital options can significantly reduce costs in this category.</p>
+                </div>
+                
+                <div class="cost-category">
+                    <h3>🎁 Miscellaneous & Contingency <span class="percentage-badge">5-10%</span></h3>
+                    <p>This category covers various smaller expenses and provides a buffer for unexpected costs.</p>
+                    
+                    <p><strong>Includes:</strong> Officiant fees ($300-$1,000), marriage license ($25-$100), guest favors ($2-$10 each), tips for vendors, and a contingency fund for unexpected expenses or cost overruns.</p>
+                </div>
+                
+                <div class="warning-box">
+                    <strong>⚠️ Don't Forget:</strong> Taxes, gratuities, and service charges can add 20-25% to your vendor costs. Always ask vendors whether their quotes include these additional fees to avoid budget surprises.
+                </div>
+                
+                <h2>Customizing Your Budget Allocation</h2>
+                
+                <p>While these standard percentages provide helpful guidelines, your personal priorities should ultimately determine your specific budget allocation. Some couples prioritize photography and allocate 20% of their budget to capturing memories, while others focus on creating an exceptional dining experience and spend 60% on venue and catering.</p>
+                
+                <h3>Identifying Your Priorities</h3>
+                
+                <p>Before finalizing your budget allocation, discuss with your partner what aspects of your wedding matter most to you both. Consider which elements you'll remember most fondly years later and which contribute most to your vision of the perfect celebration.</p>
+                
+                <p>Common priority areas include:</p>
+                
+                <p><strong>Experience-Focused:</strong> Couples who prioritize their guests' experience often allocate more to venue, catering, and entertainment while spending less on personal items like attire or flowers.</p>
+                
+                <p><strong>Memory-Focused:</strong> Those who want to preserve every moment might invest heavily in photography and videography while finding savings in other areas.</p>
+                
+                <p><strong>Style-Focused:</strong> Couples with strong aesthetic visions might allocate more to flowers, decorations, and attire to create their dream visual experience.</p>
+                
+                <h3>Adjusting Allocations</h3>
+                
+                <p>Once you've identified your priorities, adjust the standard percentages to reflect your values. If you're increasing spending in one area, identify other categories where you can reduce expenses to maintain your overall budget.</p>
+                
+                <p>For example, if you want to allocate 20% to photography (instead of the typical 12%), you might reduce flowers and decorations from 8% to 5% and find additional savings in other categories.</p>
+                
+                <div class="cta-section">
+                    <h3>See Your Personalized Cost Breakdown</h3>
+                    <p>Our wedding calculator applies these percentages to your specific budget and shows exactly how much to allocate to each category based on your priorities.</p>
+                    <a href="index.html" class="cta-button">Calculate Your Breakdown</a>
+                </div>
+                
+                <h2>Regional and Seasonal Variations</h2>
+                
+                <p>Wedding costs vary significantly by geographic location and season, but the relative percentages between categories tend to remain fairly consistent. However, some categories are more affected by location and timing than others.</p>
+                
+                <h3>Location Impact</h3>
+                
+                <p>Major metropolitan areas typically see higher costs across all categories, but venue and vendor services (photography, music, etc.) tend to see the largest increases. Product-based categories like attire and stationery show smaller regional variations since these items can be purchased online or from distant suppliers.</p>
+                
+                <h3>Seasonal Considerations</h3>
+                
+                <p>Peak wedding season (late spring through early fall) affects venue and vendor pricing most significantly. Flowers show dramatic seasonal price variations, while categories like attire and stationery remain relatively stable year-round.</p>
+                
+                <h2>Tracking and Managing Your Budget</h2>
+                
+                <p>Understanding budget allocation is only the first step – successfully managing your spending throughout the planning process requires ongoing attention and adjustment.</p>
+                
+                <h3>Budget Tracking Tools</h3>
+                
+                <p>Use spreadsheets, wedding planning apps, or budgeting software to track your spending against your planned allocations. Regular monitoring helps you identify when you're overspending in one category so you can adjust other areas accordingly.</p>
+                
+                <h3>Handling Budget Overruns</h3>
+                
+                <p>When you exceed your planned allocation in one category, you have several options: reduce spending in other categories, increase your overall budget if financially feasible, or find ways to reduce costs within the overspent category.</p>
+                
+                <p>The key is making these adjustments consciously rather than letting costs drift upward without awareness.</p>
+                
+                <h2>Final Thoughts</h2>
+                
+                <p>Understanding wedding cost breakdowns empowers you to make informed decisions about your budget allocation and ensures your spending aligns with your priorities. While these percentages provide helpful guidelines, remember that your wedding should reflect your unique values and vision.</p>
+                
+                <p>Use this information as a starting point for your budget planning, but don't hesitate to adjust allocations based on what matters most to you as a couple. The goal is creating a celebration that brings you joy without causing financial stress.</p>
+                
+                <p>Regular monitoring and adjustment throughout your planning process will help ensure you stay within your overall budget while maximizing the impact of every dollar spent.</p>
+                
+                <div class="nav-links">
+                    <a href="index.html">🧮 Use Calculator</a>
+                    <a href="blog.html">📚 More Guides</a>
+                    <a href="wedding-savings-tips.html">💰 Savings Tips</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+

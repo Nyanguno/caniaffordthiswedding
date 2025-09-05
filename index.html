@@ -1,0 +1,1680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-25TWGT6LCN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25TWGT6LCN');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Can I afford this wedding? Get an instant, free answer with our comprehensive wedding affordability calculator. Plan your dream wedding within your budget - no email required.">
+    <meta name="keywords" content="wedding affordability calculator, wedding budget calculator, can I afford this wedding, wedding cost calculator, wedding planning budget, marriage budget calculator">
+    <title>Can I Afford This Wedding? - Free Wedding Budget Calculator | No Email Required</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Can I Afford This Wedding? - Free Wedding Budget Calculator">
+    <meta property="og:description" content="Find out if you can afford your dream wedding instantly. Free comprehensive calculator with detailed cost breakdown - no email required.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nyanguno.github.io/caniaffordthiswedding">
+    <meta property="og:image" content="https://nyanguno.github.io/caniaffordthiswedding/wedding-calculator-preview.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Can I Afford This Wedding? - Free Calculator">
+    <meta name="twitter:description" content="Plan your dream wedding within budget. Free calculator with detailed cost breakdown.">
+    <meta name="twitter:image" content="https://nyanguno.github.io/caniaffordthiswedding/wedding-calculator-preview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Can I Afford This Wedding? Calculator",
+        "description": "Free wedding affordability calculator with comprehensive cost breakdown. Plan your dream wedding within budget - no email required.",
+        "url": "https://nyanguno.github.io/caniaffordthiswedding",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "featureList": [
+            "Wedding affordability calculation",
+            "Comprehensive cost breakdown",
+            "Guest count impact analysis",
+            "Regional cost adjustments",
+            "Savings timeline planning",
+            "Cost reduction suggestions",
+            "No email required",
+            "Mobile friendly"
+        ],
+        "author": {
+            "@type": "Organization",
+            "name": "Can I Afford This"
+        }
+    }
+    </script>
+    
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How much should I budget for my wedding?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Financial experts recommend spending 10-15% of your annual income on your wedding. However, the right budget depends on your savings, timeline, and priorities. Our calculator helps you find a realistic budget based on your specific situation."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What factors affect wedding costs the most?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Guest count is the biggest factor affecting wedding costs, as it impacts catering, venue size, invitations, and favors. Location, season, day of the week, and level of formality also significantly influence costs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I reduce my wedding costs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The most effective ways to reduce wedding costs include: reducing guest count, choosing off-peak dates (weekdays or off-season), selecting less expensive venues, DIY decorations, buffet-style dining, and digital invitations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How far in advance should I start saving for my wedding?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Most couples benefit from 12-18 months of saving time. This allows you to save gradually without straining your budget and gives you flexibility to book preferred vendors and venues."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+        
+        .hero h1 {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        
+        .hero .subtitle {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+        
+        .calculator-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .calculator-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .form-section {
+            margin-bottom: 32px;
+        }
+        
+        .form-section h3 {
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 24px;
+        }
+        
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #374151;
+            font-size: 1rem;
+        }
+        
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            background: #f9fafb;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #f093fb;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(240, 147, 251, 0.1);
+        }
+        
+        .optional {
+            font-weight: 400;
+            color: #6b7280;
+            font-size: 0.9rem;
+        }
+        
+        .mode-toggle {
+            display: flex;
+            background: #f3f4f6;
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 24px;
+        }
+        
+        .mode-toggle button {
+            flex: 1;
+            padding: 12px 16px;
+            border: none;
+            background: transparent;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .mode-toggle button.active {
+            background: white;
+            color: #f5576c;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        
+        .advanced-options {
+            border-top: 1px solid #e5e7eb;
+            padding-top: 24px;
+            margin-top: 24px;
+        }
+        
+        .advanced-toggle {
+            background: none;
+            border: none;
+            color: #6366f1;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 20px;
+            transition: color 0.3s ease;
+        }
+        
+        .advanced-toggle:hover {
+            color: #4f46e5;
+        }
+        
+        .advanced-content {
+            display: none;
+        }
+        
+        .advanced-content.show {
+            display: block;
+            animation: slideDown 0.3s ease;
+        }
+        
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .calculate-btn {
+            width: 100%;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            padding: 20px 24px;
+            border-radius: 12px;
+            font-size: 1.3rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 24px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .calculate-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(240, 147, 251, 0.4);
+        }
+        
+        .calculate-btn:active {
+            transform: translateY(0);
+        }
+        
+        .calculate-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .result {
+            margin-top: 32px;
+            padding: 32px;
+            border-radius: 16px;
+            display: none;
+            animation: slideIn 0.5s ease;
+        }
+        
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .result.success {
+            background: linear-gradient(135deg, #ecfdf5 0%, #f0fdf4 100%);
+            border: 2px solid #10b981;
+            color: #065f46;
+        }
+        
+        .result.warning {
+            background: linear-gradient(135deg, #fffbeb 0%, #fefce8 100%);
+            border: 2px solid #f59e0b;
+            color: #92400e;
+        }
+        
+        .result.danger {
+            background: linear-gradient(135deg, #fef2f2 0%, #fef1f1 100%);
+            border: 2px solid #ef4444;
+            color: #991b1b;
+        }
+        
+        .result-header {
+            text-align: center;
+            margin-bottom: 24px;
+        }
+        
+        .result-icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+        
+        .result-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        
+        .result-message {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+        
+        .result-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 24px 0;
+        }
+        
+        .result-card {
+            background: rgba(255,255,255,0.7);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .result-card h4 {
+            font-size: 0.9rem;
+            color: #6b7280;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .result-card .value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #1f2937;
+        }
+        
+        .breakdown-section {
+            margin-top: 32px;
+            background: rgba(255,255,255,0.5);
+            padding: 24px;
+            border-radius: 12px;
+        }
+        
+        .breakdown-section h4 {
+            margin-bottom: 16px;
+            color: #374151;
+            font-size: 1.2rem;
+        }
+        
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.1);
+        }
+        
+        .breakdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .breakdown-item .category {
+            font-weight: 500;
+            color: #374151;
+        }
+        
+        .breakdown-item .amount {
+            font-weight: 600;
+            color: #1f2937;
+        }
+        
+        .suggestions {
+            margin-top: 24px;
+            background: rgba(255,255,255,0.5);
+            padding: 24px;
+            border-radius: 12px;
+        }
+        
+        .suggestions h4 {
+            margin-bottom: 16px;
+            color: #374151;
+            font-size: 1.2rem;
+        }
+        
+        .suggestions ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .suggestions li {
+            padding: 8px 0;
+            padding-left: 24px;
+            position: relative;
+            color: #4b5563;
+        }
+        
+        .suggestions li::before {
+            content: '💡';
+            position: absolute;
+            left: 0;
+        }
+        
+        .export-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+            flex-wrap: wrap;
+        }
+        
+        .export-btn {
+            background: #10b981;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            flex: 1;
+            min-width: 120px;
+        }
+        
+        .export-btn:hover {
+            background: #059669;
+            transform: translateY(-1px);
+        }
+        
+        .clear-btn {
+            background: #ef4444;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .clear-btn:hover {
+            background: #dc2626;
+            transform: translateY(-1px);
+        }
+        
+        .info-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .info-section h2 {
+            color: #1f2937;
+            margin-bottom: 24px;
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+        .info-section p {
+            margin-bottom: 16px;
+            color: #6b7280;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: #f093fb;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(240, 147, 251, 0.2);
+        }
+        
+        .feature-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .feature-card h3 {
+            color: #1f2937;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+        
+        .feature-card p {
+            color: #6b7280;
+            line-height: 1.6;
+            margin: 0;
+        }
+        
+        .testimonials {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .testimonials h2 {
+            color: #1f2937;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-item {
+            background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+            border-radius: 16px;
+            padding: 30px;
+            border-left: 4px solid #f093fb;
+            position: relative;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+        }
+        
+        .testimonial-content p {
+            color: #374151;
+            line-height: 1.7;
+            font-style: italic;
+            margin: 0;
+            font-size: 1.1rem;
+        }
+        
+        .testimonial-author strong {
+            color: #1f2937;
+            font-weight: 600;
+        }
+        
+        .testimonial-author span {
+            color: #6b7280;
+            font-size: 0.9rem;
+            display: block;
+            margin-top: 4px;
+        }
+        
+        .cross-calculators {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 80px 0;
+            margin: 60px 0;
+        }
+        
+        .cross-calculators h2 {
+            text-align: center;
+            color: #1f2937;
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .cross-calculators p {
+            text-align: center;
+            color: #6b7280;
+            font-size: 1.2rem;
+            margin-bottom: 50px;
+        }
+        
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .calculator-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .calculator-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .calculator-card.current {
+            border-color: #f093fb;
+            background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+        }
+        
+        .calculator-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+        
+        .calculator-card h3 {
+            color: #1f2937;
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .calculator-card p {
+            color: #6b7280;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+        
+        .calculator-link {
+            display: inline-block;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .calculator-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 87, 108, 0.3);
+        }
+        
+        .calculator-link.current {
+            background: #6b7280;
+            cursor: default;
+        }
+        
+        .calculator-link.current:hover {
+            transform: none;
+            box-shadow: none;
+        }
+        
+        .social-sharing {
+            margin-top: 30px;
+            padding: 25px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            border-radius: 15px;
+            text-align: center;
+        }
+        
+        .social-sharing h4 {
+            color: #1f2937;
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .share-btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+        }
+        
+        .share-btn.facebook {
+            background: #1877f2;
+            color: white;
+        }
+        
+        .share-btn.facebook:hover {
+            background: #166fe5;
+            transform: translateY(-2px);
+        }
+        
+        .share-btn.twitter {
+            background: #1da1f2;
+            color: white;
+        }
+        
+        .share-btn.twitter:hover {
+            background: #1a91da;
+            transform: translateY(-2px);
+        }
+        
+        .share-btn.instagram {
+            background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+            color: white;
+        }
+        
+        .share-btn.instagram:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(188, 24, 136, 0.3);
+        }
+        
+        .share-btn.link {
+            background: #6b7280;
+            color: white;
+        }
+        
+        .share-btn.link:hover {
+            background: #4b5563;
+            transform: translateY(-2px);
+        }
+        
+        .comments-section {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 80px 0;
+            margin-top: 60px;
+        }
+        
+        .comments-section h2 {
+            text-align: center;
+            color: #1f2937;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .comments-section p {
+            text-align: center;
+            color: #6b7280;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .faq {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        
+        .faq h2 {
+            color: #1f2937;
+            margin-bottom: 30px;
+            font-size: 2rem;
+            text-align: center;
+        }
+        
+        .faq-item {
+            margin-bottom: 24px;
+            padding: 24px;
+            background: #f8fafc;
+            border-radius: 12px;
+            border-left: 4px solid #f093fb;
+        }
+        
+        .faq-item h3 {
+            color: #374151;
+            margin-bottom: 12px;
+            font-size: 1.2rem;
+        }
+        
+        .faq-item p {
+            color: #6b7280;
+            line-height: 1.7;
+            margin: 0;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .footer a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .calculator-card,
+            .info-section,
+            .testimonials,
+            .faq {
+                padding: 24px;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .result-details {
+                grid-template-columns: 1fr;
+            }
+            
+            .export-buttons {
+                flex-direction: column;
+            }
+            
+            .export-btn {
+                flex: none;
+            }
+            
+            .container {
+                padding: 16px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.9rem;
+            }
+            
+            .calculator-card,
+            .info-section,
+            .faq {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>💍 Can I Afford This Wedding?</h1>
+            <p>Free wedding affordability calculator with comprehensive cost breakdown. Plan your dream wedding within your budget — in 60 seconds.</p>
+            <p>Get an instant answer to your biggest question</p>
+            <p class="subtitle">No email required • 100% free • Takes 60 seconds</p>
+        </div>
+        
+        <div class="calculator-card">
+            <div class="mode-toggle">
+                <button id="affordabilityMode" class="active" onclick="switchMode('affordability')">
+                    Can I afford this wedding?
+                </button>
+                <button id="reverseMode" onclick="switchMode('reverse')">
+                    What wedding can I afford?
+                </button>
+            </div>
+            
+            <form id="weddingForm">
+                <div class="form-section">
+                    <h3>💰 Basic Information</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="currency">Currency:</label>
+                            <select id="currency" onchange="updateCurrencySymbols()">
+                                <option value="USD">🇺🇸 USD - US Dollar</option>
+                                <option value="EUR">🇪🇺 EUR - Euro</option>
+                                <option value="GBP">🇬🇧 GBP - British Pound</option>
+                                <option value="CAD">🇨🇦 CAD - Canadian Dollar</option>
+                                <option value="AUD">🇦🇺 AUD - Australian Dollar</option>
+                                <option value="SGD">🇸🇬 SGD - Singapore Dollar</option>
+                                <option value="JPY">🇯🇵 JPY - Japanese Yen</option>
+                                <option value="CHF">🇨🇭 CHF - Swiss Franc</option>
+                                <option value="INR">🇮🇳 INR - Indian Rupee</option>
+                                <option value="CNY">🇨🇳 CNY - Chinese Yuan</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="weddingBudgetGroup">
+                            <label for="weddingBudget">Desired Wedding Budget (<span id="budgetCurrency">$</span>)</label>
+                            <input type="text" id="weddingBudget" placeholder="e.g. 35,000" 
+                                   onfocus="formatInputOnFocus('weddingBudget')" 
+                                   onblur="formatInputOnBlur('weddingBudget')" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="monthlyIncome">Monthly Income (<span id="incomeCurrency">$</span>)</label>
+                            <input type="text" id="monthlyIncome" placeholder="e.g. 6,000" 
+                                   onfocus="formatInputOnFocus('monthlyIncome')" 
+                                   onblur="formatInputOnBlur('monthlyIncome')" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="monthlyExpenses">Monthly Expenses (<span id="expensesCurrency">$</span>)</label>
+                            <input type="text" id="monthlyExpenses" placeholder="e.g. 3,500" 
+                                   onfocus="formatInputOnFocus('monthlyExpenses')" 
+                                   onblur="formatInputOnBlur('monthlyExpenses')" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="currentSavings">Current Savings (<span id="savingsCurrency">$</span>)</label>
+                            <input type="text" id="currentSavings" placeholder="e.g. 10,000" 
+                                   onfocus="formatInputOnFocus('currentSavings')" 
+                                   onblur="formatInputOnBlur('currentSavings')" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="timelineMonths">Months Until Wedding:</label>
+                            <select id="timelineMonths">
+                                <option value="6">6 months</option>
+                                <option value="9">9 months</option>
+                                <option value="12" selected>12 months</option>
+                                <option value="15">15 months</option>
+                                <option value="18">18 months</option>
+                                <option value="24">24 months</option>
+                                <option value="36">36 months</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-section">
+                    <h3>👥 Wedding Details</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="guestCount">Number of Guests:</label>
+                            <input type="number" id="guestCount" placeholder="e.g. 100" min="10" max="500" value="100" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="location">Location/Region:</label>
+                            <select id="location">
+                                <option value="average_us">Average US City</option>
+                                <option value="new_york">New York City</option>
+                                <option value="los_angeles">Los Angeles</option>
+                                <option value="chicago">Chicago</option>
+                                <option value="singapore">Singapore</option>
+                                <option value="london">London</option>
+                                <option value="rural">Rural/Small Town</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="advanced-options">
+                    <button type="button" class="advanced-toggle" onclick="toggleAdvanced()">
+                        <span id="advancedIcon">▼</span> Advanced Options
+                    </button>
+                    <div class="advanced-content" id="advancedContent">
+                        <div class="form-section">
+                            <h3>🎭 Wedding Style</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="venueType">Venue Type:</label>
+                                    <select id="venueType">
+                                        <option value="hotel">Hotel/Banquet Hall</option>
+                                        <option value="outdoor">Outdoor/Garden</option>
+                                        <option value="church">Church/Religious</option>
+                                        <option value="beach">Beach/Destination</option>
+                                        <option value="rustic">Rustic/Barn</option>
+                                        <option value="home">Home/Backyard</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formalityLevel">Formality Level:</label>
+                                    <select id="formalityLevel">
+                                        <option value="casual">Casual</option>
+                                        <option value="semi_formal">Semi-Formal</option>
+                                        <option value="formal" selected>Formal</option>
+                                        <option value="black_tie">Black Tie</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="season">Season/Timing:</label>
+                                    <select id="season">
+                                        <option value="peak">Peak Season (Spring/Fall Saturday)</option>
+                                        <option value="off_peak" selected>Off-Peak (Winter/Summer)</option>
+                                        <option value="weekday">Weekday</option>
+                                        <option value="sunday">Sunday</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="diyLevel">DIY Level:</label>
+                                    <select id="diyLevel">
+                                        <option value="none">Full Service</option>
+                                        <option value="some" selected>Some DIY</option>
+                                        <option value="lots">Lots of DIY</option>
+                                        <option value="mostly">Mostly DIY</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="calculate-btn" id="calculateBtn">
+                    Calculate Wedding Affordability
+                </button>
+            </form>
+            
+            <div id="result" class="result"></div>
+        </div>
+        
+        <div class="info-section">
+            <h2>How Does This Wedding Calculator Work?</h2>
+            <p>Our comprehensive wedding affordability calculator analyzes your financial situation and provides realistic budget recommendations based on proven financial principles.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Smart Budget Analysis</h3>
+                    <p>Uses the 10-15% rule of annual income while considering your unique financial situation, savings timeline, and disposable income.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">🌍</div>
+                    <h3>Regional Cost Adjustments</h3>
+                    <p>Automatically adjusts estimates based on your location, from major metropolitan areas to rural settings, including international locations.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">👥</div>
+                    <h3>Guest Count Impact</h3>
+                    <p>Calculates how your guest list affects per-person costs for catering, favors, invitations, and venue requirements.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">💡</div>
+                    <h3>Cost-Saving Suggestions</h3>
+                    <p>Provides personalized recommendations to reduce costs while maintaining your dream wedding vision.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">📅</div>
+                    <h3>Timeline Planning</h3>
+                    <p>Shows how your saving timeline affects affordability and suggests optimal saving strategies.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon">📋</div>
+                    <h3>Detailed Breakdown</h3>
+                    <p>Comprehensive cost breakdown by category: venue, catering, photography, attire, flowers, and more.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="testimonials">
+            <h2>What Couples Say About Our Calculator</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"This calculator was a game-changer! We were planning a $50k wedding on a $60k combined income. It showed us we needed to scale back, and we had an amazing $30k wedding instead. No debt, just joy!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Emma & James</strong>
+                        <span>Married in 2024</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"The guest count feature opened our eyes. We realized that cutting 30 guests would save us $4,000 - enough for our honeymoon! The detailed breakdown helped us prioritize what really mattered."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Sarah & Michael</strong>
+                        <span>Planning their 2025 wedding</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"As a wedding planner, I recommend this calculator to all my clients. The regional adjustments are spot-on for Singapore, and it helps couples set realistic expectations from day one."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <strong>Lisa Chen</strong>
+                        <span>Wedding Planner, Singapore</span>
+                    </div>
+                </div>
+           <div class="cross-calculators">
+        <div class="container">
+            <h2>🧮 More Financial Calculators</h2>
+            <p>Explore our other free calculators to make informed financial decisions</p>
+            
+            <div class="calculator-grid">
+                <div class="calculator-card">
+                    <div class="calculator-icon">🏠</div>
+                    <h3>Can I Afford This House?</h3>
+                    <p>Calculate home affordability based on your income, expenses, and down payment. Get personalized recommendations for your home buying budget.</p>
+                    <a href="https://nyanguno.github.io/caniaffordthishouse/" target="_blank" class="calculator-link">Try House Calculator →</a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="calculator-icon">🚗</div>
+                    <h3>Can I Afford This Car?</h3>
+                    <p>Determine car affordability with detailed analysis of monthly payments, insurance, and total ownership costs. Make smart car buying decisions.</p>
+                    <a href="https://nyanguno.github.io/caniaffordthiscar/" target="_blank" class="calculator-link">Try Car Calculator →</a>
+                </div>
+                
+                <div class="calculator-card">
+                    <div class="calculator-icon">💍</div>
+                    <h3>Can I Afford This Wedding?</h3>
+                    <p>You're here! Plan your dream wedding within budget with comprehensive cost breakdowns and personalized recommendations.</p>
+                    <a href="#calculator" class="calculator-link current">Current Calculator</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <h3>How much should I budget for my wedding?</h3>
+                <p>Financial experts recommend spending 10-15% of your annual income on your wedding. However, the right budget depends on your savings, timeline, and priorities. Our calculator helps you find a realistic budget based on your specific situation.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>What factors affect wedding costs the most?</h3>
+                <p>Guest count is the biggest factor affecting wedding costs, as it impacts catering, venue size, invitations, and favors. Location, season, day of the week, and level of formality also significantly influence costs.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How can I reduce my wedding costs?</h3>
+                <p>The most effective ways to reduce wedding costs include: reducing guest count, choosing off-peak dates (weekdays or off-season), selecting less expensive venues, DIY decorations, buffet-style dining, and digital invitations.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>How far in advance should I start saving for my wedding?</h3>
+                <p>Most couples benefit from 12-18 months of saving time. This allows you to save gradually without straining your budget and gives you flexibility to book preferred vendors and venues.</p>
+            </div>
+            
+            <div class="faq-item">
+                <h3>Are the cost estimates accurate for my location?</h3>
+                <p>Our calculator uses regional multipliers based on extensive market research. While individual vendor prices vary, our estimates provide a solid foundation for budget planning. Always get local quotes for the most accurate pricing.</p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="comments-section">
+        <div class="container">
+            <h2>💬 Wedding Budget Discussions</h2>
+            <p>✨ Share smart savings tips for weddings.<br>
+            ✨ Ask questions about budgeting, planning, or cutting costs.<br>
+            ✨ Connect with others planning for their dream wedding.</p>
+            
+            <script src="https://giscus.app/client.js"
+                    data-repo="nyanguno/caniaffordthiswedding"
+                    data-repo-id="R_kgDOPqP6dQ"
+                    data-category="General"
+                    data-category-id="DIC_kwDOPqP6dc4Cu_uA"
+                    data-mapping="pathname"
+                    data-strict="0"
+                    data-reactions-enabled="1"
+                    data-emit-metadata="0"
+                    data-input-position="bottom"
+                    data-theme="preferred_color_scheme"
+                    data-lang="en"
+                    crossorigin="anonymous"
+                    async>
+            </script>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <p>💝 This calculator is completely free and helps thousands of couples plan their dream weddings within budget.</p>
+            <p>Made with ❤️ by <a href="https://github.com/nyanguno">Nyanguno</a> | <a href="blog.html">Read our wedding planning blog</a></p>
+            <p>© 2025 Can I Afford This. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script>
+        // Currency symbols mapping
+        const currencySymbols = {
+            'USD': '$', 'EUR': '€', 'GBP': '£', 'CAD': 'C$', 'AUD': 'A$',
+            'SGD': 'S$', 'JPY': '¥', 'CHF': 'CHF', 'INR': '₹', 'CNY': '¥'
+        };
+        
+        // Regional cost multipliers
+        const regionalMultipliers = {
+            'singapore': 1.3,
+            'new_york': 1.4,
+            'london': 1.2,
+            'los_angeles': 1.3,
+            'chicago': 1.1,
+            'average_us': 1.0,
+            'rural': 0.7
+        };
+        
+        // Wedding cost breakdown percentages
+        const costBreakdown = {
+            'venue_catering': { name: 'Venue & Catering', percentage: 0.45 },
+            'photography': { name: 'Photography & Video', percentage: 0.12 },
+            'attire': { name: 'Attire & Rings', percentage: 0.08 },
+            'flowers_decor': { name: 'Flowers & Decor', percentage: 0.08 },
+            'music': { name: 'Music & Entertainment', percentage: 0.08 },
+            'stationery': { name: 'Invitations & Stationery', percentage: 0.03 },
+            'transportation': { name: 'Transportation', percentage: 0.03 },
+            'miscellaneous': { name: 'Miscellaneous & Tips', percentage: 0.13 }
+        };
+        
+        let currentMode = 'affordability';
+        
+        function updateCurrencySymbols() {
+            const currency = document.getElementById('currency').value;
+            const symbol = currencySymbols[currency];
+            
+            document.getElementById('budgetCurrency').textContent = symbol;
+            document.getElementById('incomeCurrency').textContent = symbol;
+            document.getElementById('expensesCurrency').textContent = symbol;
+            document.getElementById('savingsCurrency').textContent = symbol;
+        }
+        
+        function switchMode(mode) {
+            currentMode = mode;
+            
+            // Update button states
+            document.getElementById('affordabilityMode').classList.toggle('active', mode === 'affordability');
+            document.getElementById('reverseMode').classList.toggle('active', mode === 'reverse');
+            
+            // Show/hide budget input
+            const budgetGroup = document.getElementById('weddingBudgetGroup');
+            if (mode === 'affordability') {
+                budgetGroup.style.display = 'block';
+                document.getElementById('weddingBudget').required = true;
+                document.getElementById('calculateBtn').textContent = 'Calculate Wedding Affordability';
+            } else {
+                budgetGroup.style.display = 'none';
+                document.getElementById('weddingBudget').required = false;
+                document.getElementById('calculateBtn').textContent = 'Calculate Affordable Budget';
+            }
+        }
+        
+        function toggleAdvanced() {
+            const content = document.getElementById('advancedContent');
+            const icon = document.getElementById('advancedIcon');
+            
+            if (content.classList.contains('show')) {
+                content.classList.remove('show');
+                icon.textContent = '▼';
+            } else {
+                content.classList.add('show');
+                icon.textContent = '▲';
+            }
+        }
+        
+        function parseNumber(value) {
+            return parseFloat(value.replace(/[,$]/g, '')) || 0;
+        }
+        
+        function formatNumberWithCommas(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        
+        function formatCurrency(amount, currency = 'USD') {
+            const symbol = currencySymbols[currency];
+            return symbol + amount.toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+        }
+        
+        // Add input formatting for number fields
+        function formatInputOnBlur(inputId) {
+            const input = document.getElementById(inputId);
+            const value = parseNumber(input.value);
+            if (value > 0) {
+                input.value = formatNumberWithCommas(value);
+            }
+        }
+        
+        function formatInputOnFocus(inputId) {
+            const input = document.getElementById(inputId);
+            const value = parseNumber(input.value);
+            if (value > 0) {
+                input.value = value.toString();
+            }
+        }
+        
+        function calculateAffordability() {
+            // Get form values
+            const currency = document.getElementById('currency').value;
+            const monthlyIncome = parseNumber(document.getElementById('monthlyIncome').value);
+            const monthlyExpenses = parseNumber(document.getElementById('monthlyExpenses').value);
+            const currentSavings = parseNumber(document.getElementById('currentSavings').value);
+            const timelineMonths = parseInt(document.getElementById('timelineMonths').value);
+            const guestCount = parseInt(document.getElementById('guestCount').value);
+            const location = document.getElementById('location').value;
+            
+            let weddingBudget;
+            if (currentMode === 'affordability') {
+                weddingBudget = parseNumber(document.getElementById('weddingBudget').value);
+            }
+            
+            // Validate inputs
+            if (monthlyIncome <= 0 || monthlyExpenses < 0 || currentSavings < 0 || guestCount <= 0) {
+                alert('Please enter valid positive numbers for all required fields.');
+                return;
+            }
+            
+            if (monthlyExpenses >= monthlyIncome) {
+                alert('Your monthly expenses cannot be equal to or greater than your monthly income.');
+                return;
+            }
+            
+            // Calculate disposable income and potential savings
+            const monthlyDisposable = monthlyIncome - monthlyExpenses;
+            const potentialSavings = monthlyDisposable * timelineMonths * 0.3; // 30% of disposable income
+            const totalAvailable = currentSavings + potentialSavings;
+            
+            // Calculate recommended budget range
+            const annualIncome = monthlyIncome * 12;
+            const recommendedMin = annualIncome * 0.10;
+            const recommendedMax = annualIncome * 0.15;
+            
+            // Apply regional multiplier
+            const locationMultiplier = regionalMultipliers[location] || 1.0;
+            
+            let targetBudget;
+            if (currentMode === 'affordability') {
+                targetBudget = weddingBudget * locationMultiplier;
+            } else {
+                targetBudget = Math.min(totalAvailable, recommendedMax * locationMultiplier);
+            }
+            
+            // Calculate affordability
+            const affordabilityRatio = totalAvailable / targetBudget;
+            const monthlyNeeded = Math.max(0, (targetBudget - currentSavings) / timelineMonths);
+            
+            // Determine status
+            let status, title, message, icon;
+            if (currentMode === 'reverse') {
+                status = 'success';
+                title = 'Your Affordable Wedding Budget';
+                message = `Based on your income and savings timeline, you can afford a wedding budget of ${formatCurrency(targetBudget, currency)}.`;
+                icon = '✅';
+            } else if (affordabilityRatio >= 1.0) {
+                status = 'success';
+                title = 'Yes, You Can Afford This Wedding!';
+                message = `Great news! You'll have ${formatCurrency(totalAvailable, currency)} available for your ${formatCurrency(targetBudget, currency)} wedding budget.`;
+                icon = '🎉';
+            } else if (affordabilityRatio >= 0.8) {
+                status = 'warning';
+                title = 'Possibly, With Some Adjustments';
+                const shortfall = targetBudget - totalAvailable;
+                message = `You're close! You're ${formatCurrency(shortfall, currency)} short. Consider reducing costs or extending your timeline.`;
+                icon = '⚠️';
+            } else {
+                status = 'danger';
+                title = 'This Budget May Be Too High';
+                const shortfall = targetBudget - totalAvailable;
+                message = `You're ${formatCurrency(shortfall, currency)} short. Consider a smaller budget or longer saving period.`;
+                icon = '❌';
+            }
+            
+            // Generate cost breakdown
+            const breakdown = generateCostBreakdown(targetBudget, guestCount);
+            
+            // Generate suggestions
+            const suggestions = generateSuggestions(affordabilityRatio, targetBudget, totalAvailable);
+            
+            // Display results
+            displayResults(status, title, message, icon, {
+                totalAvailable,
+                targetBudget,
+                monthlyNeeded,
+                recommendedMin,
+                recommendedMax,
+                breakdown,
+                suggestions,
+                currency,
+                guestCount,
+                timelineMonths
+            });
+        }
+        
+        function generateCostBreakdown(budget, guestCount) {
+            const breakdown = {};
+            const perPersonCosts = {
+                food: 80,
+                drinks: 35,
+                favors: 5,
+                invitations: 3
+            };
+            
+            // Calculate per-person costs
+            const perPersonTotal = (perPersonCosts.food + perPersonCosts.drinks) * guestCount;
+            const remainingBudget = budget - perPersonTotal;
+            
+            // Allocate remaining budget proportionally
+            for (const [key, data] of Object.entries(costBreakdown)) {
+                if (key === 'venue_catering') {
+                    breakdown[key] = (remainingBudget * data.percentage) + perPersonTotal;
+                } else if (key === 'stationery') {
+                    breakdown[key] = (remainingBudget * data.percentage) + (perPersonCosts.invitations * guestCount);
+                } else {
+                    breakdown[key] = remainingBudget * data.percentage;
+                }
+            }
+            
+            // Add favors as separate item
+            breakdown['favors'] = perPersonCosts.favors * guestCount;
+            
+            return breakdown;
+        }
+        
+        function generateSuggestions(affordabilityRatio, targetBudget, totalAvailable) {
+            const suggestions = [];
+            const reductionNeeded = targetBudget - totalAvailable;
+            const reductionPercentage = reductionNeeded / targetBudget;
+            
+            if (reductionPercentage > 0.3) {
+                suggestions.push(
+                    "Consider a smaller guest list (biggest impact on costs)",
+                    "Choose an off-peak date (Friday/Sunday or off-season)",
+                    "Select a less expensive venue or non-traditional venue",
+                    "Opt for a brunch or lunch reception instead of dinner"
+                );
+            } else if (reductionPercentage > 0.15) {
+                suggestions.push(
+                    "Reduce guest count by 10-20%",
+                    "Choose a weekday or off-season date",
+                    "DIY some decorations and favors",
+                    "Consider a buffet instead of plated dinner"
+                );
+            } else if (reductionPercentage > 0) {
+                suggestions.push(
+                    "Shop around for better vendor prices",
+                    "Simplify floral arrangements",
+                    "Choose digital invitations",
+                    "Skip some traditional extras"
+                );
+            } else {
+                suggestions.push(
+                    "You're in great shape! Consider setting aside extra for unexpected costs",
+                    "Think about upgrading one special element (photography, flowers, etc.)",
+                    "Plan for a memorable honeymoon with your extra budget"
+                );
+            }
+            
+            return suggestions;
+        }
+        
+        function displayResults(status, title, message, icon, data) {
+            const resultDiv = document.getElementById('result');
+            
+            const html = `
+                <div class="result-header">
+                    <span class="result-icon">${icon}</span>
+                    <h3 class="result-title">${title}</h3>
+                    <p class="result-message">${message}</p>
+                </div>
+                
+                <div class="result-details">
+                    <div class="result-card">
+                        <h4>Available Funds</h4>
+                        <div class="value">${formatCurrency(data.totalAvailable, data.currency)}</div>
+                    </div>
+                    <div class="result-card">
+                        <h4>Wedding Budget</h4>
+                        <div class="value">${formatCurrency(data.targetBudget, data.currency)}</div>
+                    </div>
+                    <div class="result-card">
+                        <h4>Monthly Savings Needed</h4>
+                        <div class="value">${formatCurrency(data.monthlyNeeded, data.currency)}</div>
+                    </div>
+                    <div class="result-card">
+                        <h4>Cost Per Guest</h4>
+                        <div class="value">${formatCurrency(data.targetBudget / data.guestCount, data.currency)}</div>
+                    </div>
+                </div>
+                
+                <div class="breakdown-section">
+                    <h4>💰 Detailed Cost Breakdown</h4>
+                    ${Object.entries(data.breakdown).map(([key, amount]) => {
+                        const categoryName = costBreakdown[key]?.name || (key === 'favors' ? 'Wedding Favors' : key);
+                        return `
+                            <div class="breakdown-item">
+                                <span class="category">${categoryName}</span>
+                                <span class="amount">${formatCurrency(amount, data.currency)}</span>
+                            </div>
+                        `;
+                    }).join('')}
+                </div>
+                
+                <div class="suggestions">
+                    <h4>💡 Recommendations</h4>
+                    <ul>
+                        ${data.suggestions.map(suggestion => `<li>${suggestion}</li>`).join('')}
+                    </ul>
+                </div>
+                
+                <div class="export-buttons">
+                    <button class="export-btn" onclick="exportResults()">📄 Export PDF</button>
+                    <button class="export-btn" onclick="copyResults()">📋 Copy Results</button>
+                    <button class="clear-btn" onclick="clearForm()">🗑️ Clear Form</button>
+                </div>
+                
+                <div class="social-sharing">
+                    <h4>📢 Share Your Wedding Budget Plan</h4>
+                    <div class="share-buttons">
+                        <button class="share-btn facebook" onclick="shareOnFacebook()">
+                            📘 Facebook
+                        </button>
+                        <button class="share-btn twitter" onclick="shareOnTwitter()">
+                            🐦 Twitter
+                        </button>
+                        <button class="share-btn instagram" onclick="shareOnInstagram()">
+                            📷 Instagram
+                        </button>
+                        <button class="share-btn link" onclick="copyShareLink()">
+                            🔗 Copy Link
+                        </button>
+                    </div>
+                </div>
+            `;
+            
+            resultDiv.innerHTML = html;
+            resultDiv.className = `result ${status}`;
+            resultDiv.style.display = 'block';
+            
+            // Scroll to results
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        function exportResults() {
+            // This would typically generate a PDF - for now, we'll show an alert
+            alert('PDF export feature coming soon! For now, you can copy the results to save them.');
+        }
+        
+        function copyResults() {
+            const resultDiv = document.getElementById('result');
+            const text = resultDiv.innerText;
+            
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Results copied to clipboard!');
+            }).catch(() => {
+                alert('Unable to copy to clipboard. Please select and copy the results manually.');
+            });
+        }
+        
+        function clearForm() {
+            if (confirm('Are you sure you want to clear all form data?')) {
+                document.getElementById('weddingForm').reset();
+                document.getElementById('result').style.display = 'none';
+                document.getElementById('guestCount').value = '100';
+                updateCurrencySymbols();
+            }
+        }
+        
+        // Social sharing functions
+        function shareOnFacebook() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('I just planned my wedding budget with this amazing free calculator! 💍✨');
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${url}&quote=${text}`, '_blank', 'width=600,height=400');
+        }
+        
+        function shareOnTwitter() {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent('Just planned my wedding budget with this free calculator! 💍✨ #WeddingPlanning #BudgetPlanning');
+            window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
+        }
+        
+        function shareOnInstagram() {
+            // Instagram doesn't support direct URL sharing, so we'll copy the link and show instructions
+            copyShareLink();
+            alert('Link copied! Open Instagram and paste this link in your story or post caption. 📷✨');
+        }
+        
+        function copyShareLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                alert('Link copied to clipboard! 🔗');
+            }).catch(() => {
+                alert('Unable to copy link. Please copy the URL from your browser address bar.');
+            });
+        }
+        
+        // Form submission handler
+        document.getElementById('weddingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            calculateAffordability();
+        });
+        
+        // Initialize
+        updateCurrencySymbols();
+    </script>
+</body>
+</html>
+

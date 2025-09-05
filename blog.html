@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-25TWGT6LCN"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-25TWGT6LCN');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert wedding budget planning guides, cost-saving tips, and financial advice for couples. Learn how to plan your dream wedding without breaking the bank.">
+    <meta name="keywords" content="wedding budget planning, wedding cost guide, wedding savings tips, affordable wedding ideas, wedding financial planning, budget wedding tips">
+    <title>Wedding Budget Planning Blog - Expert Tips & Guides | Can I Afford This Wedding</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Wedding Budget Planning Blog - Expert Tips & Guides">
+    <meta property="og:description" content="Expert wedding budget planning guides and cost-saving tips for couples planning their dream wedding.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nyanguno.github.io/caniaffordthiswedding/blog.html">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💍</text></svg>">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+            padding: 40px 0;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .nav-links {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 25px;
+            background: rgba(255,255,255,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+        }
+        
+        .blog-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        
+        .blog-card h2 {
+            color: #1f2937;
+            margin-bottom: 16px;
+            font-size: 1.5rem;
+        }
+        
+        .blog-card p {
+            color: #6b7280;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .blog-card .read-more {
+            color: #f5576c;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .blog-card .read-more:hover {
+            color: #f093fb;
+            transform: translateX(5px);
+        }
+        
+        .featured-post {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .featured-post::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #f093fb 0%, #f5576c 100%);
+        }
+        
+        .featured-badge {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .footer a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-links a {
+                display: block;
+                margin: 10px 0;
+            }
+            
+            .container {
+                padding: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>💍 Wedding Budget Planning Blog</h1>
+            <p>Expert tips, guides, and insights for planning your dream wedding within budget</p>
+        </div>
+        
+        <div class="nav-links">
+            <a href="index.html">🧮 Calculator</a>
+            <a href="#budget-guides">Budget Guides</a>
+            <a href="#cost-breakdowns">Cost Breakdowns</a>
+            <a href="#savings-tips">Savings Tips</a>
+                     <div class="featured-article">
+                    <div class="featured-badge">✨ Featured Guide</div>
+                    <h2>The Complete Wedding Budget Planning Guide for 2025</h2>
+                    <p>Everything you need to know about planning your wedding budget, from setting realistic expectations to tracking expenses and finding ways to save without compromising your vision. This comprehensive guide covers all aspects of wedding financial planning.</p>
+                    <a href="wedding-budget-guide.html" class="read-more-btn">Read Full Guide →</a>
+                </div>
+                
+                <div class="articles-grid">
+                    <div class="article-card">
+                        <div class="article-icon">📊</div>
+                        <h3>Wedding Cost Breakdown by Category</h3>
+                        <p>Understand exactly where your wedding budget goes with our detailed breakdown of typical wedding expenses. Learn what percentage to allocate to each category and how to prioritize your spending.</p>
+                        <a href="wedding-cost-breakdown.html" class="read-more-btn">Read More →</a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-icon">💰</div>
+                        <h3>50 Ways to Save Money on Your Wedding</h3>
+                        <p>Practical, actionable tips to reduce your wedding costs without sacrificing quality or your vision. From DIY projects to vendor negotiations, discover proven strategies to stretch your budget further.</p>
+                        <a href="wedding-savings-tips.html" class="read-more-btn">Read More →</a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-icon">🌍</div>
+                        <h3>Regional Wedding Cost Differences</h3>
+                        <p>How location affects your wedding budget. Compare costs across different cities and countries, and learn how to plan for regional price variations in venues, vendors, and services.</p>
+                        <a href="#" class="read-more-btn coming-soon">Coming Soon</a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-icon">👥</div>
+                        <h3>How Guest Count Affects Your Budget</h3>
+                        <p>The single biggest factor in wedding costs explained. Learn how to optimize your guest list, calculate per-person costs, and make informed decisions about your wedding size.</p>
+                        <a href="#" class="read-more-btn coming-soon">Coming Soon</a>
+                    </div>
+                    
+                    <div class="article-card">
+                        <div class="article-icon">📅</div>
+                        <h3>Wedding Timeline and Budget Planning</h3>
+                        <p>How to create a realistic savings timeline for your wedding. Learn when to book vendors, how to spread costs over time, and create a month-by-month budget plan.</p>
+                        <a href="#" class="read-more-btn coming-soon">Coming Soon</a>
+                    </div>
+                </div>
+        
+        <div class="blog-grid" id="savings-tips">
+            <div class="blog-card">
+                <div class="icon">🎨</div>
+                <h2>DIY Wedding Projects That Actually Save Money</h2>
+                <p>Which DIY projects are worth your time and which ones to avoid. Get realistic cost breakdowns and time estimates for popular wedding DIY projects.</p>
+                <a href="diy-wedding-projects.html" class="read-more">Read More →</a>
+            </div>
+            
+            <div class="blog-card">
+                <div class="icon">📅</div>
+                <h2>Off-Peak Wedding Savings Guide</h2>
+                <p>How choosing the right date can save you thousands. Learn about seasonal pricing, day-of-week discounts, and other timing strategies to reduce costs.</p>
+                <a href="off-peak-wedding-savings.html" class="read-more">Read More →</a>
+            </div>
+            
+            <div class="blog-card">
+                <div class="icon">🤝</div>
+                <h2>Vendor Negotiation Strategies</h2>
+                <p>Professional tips for negotiating with wedding vendors. Learn what's negotiable, how to ask for discounts, and when to walk away from a deal.</p>
+                <a href="vendor-negotiation-tips.html" class="read-more">Read More →</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <div class="container">
+            <p>💝 Free wedding budget planning resources to help you plan your dream wedding within budget.</p>
+            <p>Made with ❤️ by <a href="https://github.com/nyanguno">Nyanguno</a> | <a href="index.html">Back to Calculator</a></p>
+            <p>© 2025 Can I Afford This. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
+
